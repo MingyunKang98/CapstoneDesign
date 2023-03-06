@@ -15,17 +15,17 @@ img = cv2.warpPerspective(src, matrix, (width, height))
 rows = 1
 cols = 2
 fig = plt.figure(figsize=(12,6))
-# ax1 = fig.add_subplot(rows, cols, 1)
-# ax1.imshow(cv2.cvtColor(src, cv2.COLOR_BGR2RGB))
-# for k in range(4):
-#     ax1.scatter(pts1[k][0], pts1[k][1])
-# ax1.set_title('Original Image')
-# ax1.axis("off")
-# ax2 = fig.add_subplot(rows, cols, 2)
-# ax2.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
-# ax2.set_title('Homography')
-# ax2.axis("off")
-# plt.show()
+ax1 = fig.add_subplot(rows, cols, 1)
+ax1.imshow(cv2.cvtColor(src, cv2.COLOR_BGR2RGB))
+for k in range(4):
+    ax1.scatter(pts1[k][0], pts1[k][1])
+ax1.set_title('Original Image')
+ax1.axis("off")
+ax2 = fig.add_subplot(rows, cols, 2)
+ax2.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+ax2.set_title('Homography')
+ax2.axis("off")
+plt.show()
 
 ############################ Hough line Transform ########################################
 
